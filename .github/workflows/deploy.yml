@@ -3,7 +3,7 @@ name: Deploy Static Website and Update About Section
 on:
   push:
     branches:
-      - main # Deploy when changes are pushed to the main branch
+      - main # Deploy whn changes are pushed to the main branch
   workflow_dispatch:
 
 jobs:
