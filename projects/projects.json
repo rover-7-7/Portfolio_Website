@@ -2,7 +2,7 @@
   {
     "name": "Style Sprint",
     "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
-    "image": "stylesprint.png",
+    "image": "stylesprint",
     "category": "mern",
     "links": {
       "view": "https://style-sprint.vercel.app/",
@@ -12,7 +12,7 @@
   {
     "name":"Web Shop",
     "desc":"E-commerce website built using MERN stack. Supports user authentication, product search, cart, payment gateway, order history.",
-    "image":"webshop.png",
+    "image":"webshop",
     "category":"mern",
     "links":{
       "view":"rover-7-7.github.io/WebShop/",
