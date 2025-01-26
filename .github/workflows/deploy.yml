@@ -5,23 +5,39 @@ on:
     branches:
       - main # Deploy when changes are pushed to the main branch
   workflow_dispatch:
-  
-  
-  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       # Step 1: Check out the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy to GitHub Pages
+      # Step 2: Build your static site (if applicable)
+      - name: Build Static Site
+        run: |
+          npm install
+          npm run build # Adjust this if you are not using npm or if you have a different build command
+
+      # Step 3: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Directory containing your static site files (adjust if needed)
+          publish_dir: ./build # Adjust this if your output directory is different
+
+      # Step 4: Update About Section with Website Link
+      - name: Update About Section
+        run: |
+          echo "Updating About section..."
+          GITHUB_REPO=${{ github.repository }}
+          GITHUB_PAGE_URL="https://${GITHUB_REPO%%/*}.github.io/${GITHUB_REPO##*/}/"
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/$GITHUB_REPO \
+            -d "{\"description\":\"Visit my website at $GITHUB_PAGE_URL\"}"
