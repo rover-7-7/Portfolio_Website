@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      repository: write # Ensure this permission is set
 
     steps:
       # Step 1: Checkout the repository
