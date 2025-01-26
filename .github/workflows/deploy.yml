@@ -23,7 +23,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Directory containing your static site files (adjust if needed)
+          publish_dir: ./ # Diirectory containing your static site files (adjust if needed)
 
       # Step 3: Update About section with deployed link
       - name: Update About Section
