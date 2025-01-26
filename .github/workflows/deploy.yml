@@ -28,7 +28,12 @@ jobs:
       - name: Update About Section
         run: |
           echo "Updating About section..."
-          DEPLOYED_URL="https://<your-username>.github.io/<your-repo-name>/"
-          gh repo edit <your-repo-name> --description "Check out my deployed site at $DEPLOYED_URL"
+          DEPLOYED_URL="https://${{ github.actor }}.github.io/${{ github.repository }}"
+
+          # Extracting the repository name from the context
+          REPO_NAME="${{ github.event.repository.name }}"
+
+          # Update the repository description using the GitHub CLI
+          gh repo edit "${REPO_NAME}" --description "Check out my deployed site at $DEPLOYED_URL"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
