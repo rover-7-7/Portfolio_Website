@@ -1,20 +1,21 @@
-name: Deploy Static Website and Update About Section
+name: Deploy Static Website
 
 on:
   push:
     branches:
-      - main # Deploy whn changes are pushed to the main branch
+      - main # Deploy when changes are pushed to the main branch
   workflow_dispatch:
-
+  
+  
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      repository: write # Ensure this permission is set
-
+    
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Check out the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
@@ -23,18 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Diirectory containing your static site files (adjust if needed)
-
-      # Step 3: Update About section with deployed link
-      - name: Update About Section
-        run: |
-          echo "Updating About section..."
-          DEPLOYED_URL="https://${{ github.actor }}.github.io/${{ github.event.repository.name }}"
-          
-          # Constructing the full repository path in OWNER/REPO format
-          REPO_PATH="${{ github.repository }}"
-          
-          # Update the repository description using the GitHub CLI
-          gh repo edit "${REPO_PATH}" --description "Check out my deployed site at $DEPLOYED_URL"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ # Directory containing your static site files (adjust if needed)
