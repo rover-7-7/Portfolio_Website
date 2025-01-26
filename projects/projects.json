@@ -2,7 +2,7 @@
   {
     "name": "Style Sprint",
     "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
-    "image": "stylesprint",
+    "image": "assets\images\projects\stylesprint.png",
     "category": "mern",
     "links": {
       "view": "https://style-sprint.vercel.app/",
