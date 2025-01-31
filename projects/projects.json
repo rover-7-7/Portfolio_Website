@@ -1,7 +1,7 @@
 [
   {
     "name": "Style Sprint",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
+    "desc": "StyleSprint is a full-stack e-commerce website built using the MERN stack (MongoDB, Express, React, Node.js) and Tailwind CSS.",
     "image": "stylesprint",
     "category": "mern",
     "links": {
