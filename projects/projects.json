@@ -30,13 +30,13 @@
   },
   
   {
-    "name": "ResumeGen",
+    "name": "Portfolio Website",
     "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
-    "image": "resumegen",
+    "image": "portfolio",
     "category": "mern",
     "links": {
-      "view": "https://resumegenx.netlify.app/",
-      "code": "https://github.com/resumegen"
+      "view": "https://rover-7-7.github.io/Portfolio_Website/",
+      "code": "https://github.com/rover-7-7/Portfolio_Website"
     }
   },
   {
