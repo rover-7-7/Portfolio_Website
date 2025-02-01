@@ -19,6 +19,16 @@
       "code":"https://github.com/rover-7-7/WebShop"}
   },
   {
+    "name": "Portfolio Website",
+    "desc": "A Resume Generator that creates customized resumes in just a few minutes based on your requirements. This project includes an auto-deploy feature using GitHub.",
+    "image": "portfolio",
+    "category": "mern",
+    "links": {
+      "view": "https://rover-7-7.github.io/Portfolio_Website/",
+      "code": "https://github.com/rover-7-7/Portfolio_Website"
+    }
+  },
+  {
     "name": "Crypto Tracker",
     "desc": "Crypto Tracker built using ReactJS and Chakra UI. Supports dark mode. API used coingecko.",
     "image": "cryptotracker",
@@ -29,16 +39,7 @@
     }
   },
   
-  {
-    "name": "Portfolio Website",
-    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
-    "image": "portfolio",
-    "category": "mern",
-    "links": {
-      "view": "https://rover-7-7.github.io/Portfolio_Website/",
-      "code": "https://github.com/rover-7-7/Portfolio_Website"
-    }
-  },
+  
   {
     "name": "React-Projects",
     "desc": "Full-Stack project dashboard which is collection of projects built on the React library.",
